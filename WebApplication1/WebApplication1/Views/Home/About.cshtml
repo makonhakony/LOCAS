@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<script type="text/javascript">
+    var map;
+    function initMap() {
+        // Setting.  
+        var fsoft = { lat: 16, lng: 106 };
+
+        // The map, centered 
+        map = new google.maps.Map(
+            document.getElementById('map'), { zoom: 5, center: fsoft });
+
+    }
+    var check1 = false;
+    var check2 = false;
+    var check3 = false;
+    var checkmarker = false;
+    
+</script>
+<div class="buttons">
+    <a class="b" onclick="getMarker()">Generate marker</a>
+    <a class="b" onclick="DrivenMod()">Show the Driving Path</a>
+    <a class="b" onclick="FlightMod()">Show the Flying Path </a>
+    <a class="b" onclick="Calculate()">Calculate the distance through 3 points</a>
+</div>
+
+<hr />
+
+<div style="height:500px; width:100%" id="map"></div>
+<br />
+<p><h4>The result is: </h4><span id="answer"></span></p>
