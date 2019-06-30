@@ -1,9 +1,9 @@
-namespace ContosoUniversity.Migrations
+namespace WebApplication1.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddEventSp : DbMigration
+    public partial class AddEvent_SP : DbMigration
     {
         public override void Up()
         {
@@ -13,12 +13,13 @@ namespace ContosoUniversity.Migrations
                 {
                     code = p.String(maxLength: 50),
                     name = p.String(maxLength: 50),
+                    note = p.String(maxLength: 1000),
                     lat = p.Double(),
                     lng = p.Double()
                 },
                 body:
-                @"INSERT [dbo].[Event]([EventCode],[EventName],[latitude],[longtitude])
-                    VALUES (@code,@name,@lat,@lng)"
+                @"INSERT [dbo].[Event]([EventCode],[EventName],[EventNote],[latitude],[longtitude])
+                    VALUES (@code,@name,@note,@lat,@lng)"
             );
         }
         

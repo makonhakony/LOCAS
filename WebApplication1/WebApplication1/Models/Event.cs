@@ -18,6 +18,7 @@ namespace WebApplication1.Models
         [UniqueCodeEvent(ErrorMessage ="This code already exist")]
         public string EventCode { get; set; }
         public string EventName { get; set; }
+        public string EventNote { get; set; }
         public double latitude { get; set; }
         public double longtitude { get; set; }
     }

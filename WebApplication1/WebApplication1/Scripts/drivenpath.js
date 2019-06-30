@@ -50,7 +50,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay,result) {
         travelMode: 'DRIVING'
     }, function (response, status) {
         if (status === 'OK') {
-            window.alert('Driving path from F-town to F-Ville Complete');
+            window.alert('Driving path from HCMC to HN Complete');
             directionsDisplay.setDirections(response);
         } else {
             window.alert('Directions request failed due to ' + status);

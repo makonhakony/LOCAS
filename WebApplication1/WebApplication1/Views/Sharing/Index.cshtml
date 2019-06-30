@@ -4,11 +4,23 @@
 
     ViewBag.Title = "Sharing";
 }
-<h2>@ViewBag.Title.</h2>
+<h2 class="stylehead">@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
 <a class="b" onclick="placeSharing()">Generate marker</a>
 
+<div id="locationFields" style="text-align:center">
+    <span class="input-box">
+        <input id="autocomplete"
+               class="autocomplete"
+               placeholder="Enter your address"
+               onFocus="geolocate()"
+               type="text" />
+    </span>
+    
+    <button id="placebutton" class="b2">Add</button>
+    
+</div>
 <hr />
 <script type="text/javascript" src="~/Scripts/sharing.js"></script>
 <div style="height:500px; width:100%" id="map"></div>
@@ -33,6 +45,10 @@
             <div class="controls span6">
                 <label class="control-label" for="Title">Event name</label>
                 <input type="text" class="input-xlarge" id="ename" placeholder="Event name" />
+            </div>
+            <div class="controls span6">
+                <label class="control-label" for="Title">Event note</label>
+                <input type="text" class="input-xlarge" id="enote" placeholder="Event note" />
             </div>
         </div>
     </div>

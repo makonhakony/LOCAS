@@ -1,10 +1,24 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "About us";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2 class="stylehead">@ViewBag.Title.</h2>
+<h3 style="text-align:center">@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<div style="margin-top:50px; max-width:800px; margin-left: 10%;	margin-right: 10%; margin-bottom:50px ">
+    <h3 style="font-weight: bold">What is LOCAS</h3>
+    <p style="font-size: 20px">LOCAS is the application allow users to share their location and add the travelling path. 
+    User can share the location by clicking on the map (if they dont know the address) or type the address to the search field.</p>
+</div>
+
+
+<div style="margin-top:50px; max-width:800px; margin-left: 10%;	margin-right: 10%; margin-bottom:50px ">
+    <h3 style="font-weight: bold">How to use it?</h3>
+    <p style="font-size: 20px">
+        This is the example. We can generate sample markers first and then we can select the travel path optionally.
+        Besides, it can calculate the distance as well as the time travelling between 2 location    
+    </p>
+</div>
+
 <script type="text/javascript">
     var map;
     function initMap() {
@@ -29,8 +43,10 @@
     <a class="b" onclick="Calculate()">Calculate the distance through 3 points</a>
 </div>
 
+
+
 <hr />
 
 <div style="height:500px; width:100%" id="map"></div>
 <br />
-<p><h4>The result is: </h4><span id="answer"></span></p>
+<p><h4>The result: </h4><span id="answer"></span></p>

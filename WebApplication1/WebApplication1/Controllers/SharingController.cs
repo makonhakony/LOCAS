@@ -52,8 +52,10 @@ namespace WebApplication1.Controllers
             
             command.Parameters.AddWithValue("@code", obj.EventCode);
             command.Parameters.AddWithValue("@name", obj.EventName);
+            command.Parameters.AddWithValue("@note", obj.EventNote);
             command.Parameters.AddWithValue("@lat", obj.latitude);
             command.Parameters.AddWithValue("@lng", obj.longtitude);
+
             connection.Open();
             command.ExecuteNonQuery();
             connection.Close();

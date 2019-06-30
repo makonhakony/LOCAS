@@ -58,7 +58,7 @@ var onSuccess3 = function (result) {
     }
 }
 function createpath(){
-    window.alert('Flying path from F-town to F-Ville Complete');
+    window.alert('Flying path from HCMC to HN Complete');
     flightPath.setMap(map);
 }
 function deletepath() {

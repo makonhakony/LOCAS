@@ -2,6 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/hd-background-images-for-web-pages-3.jpg");
+    background-repeat: repeat-y;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -157,4 +158,110 @@ textarea {
         animation: none !important;
         transition: none !important;
     }
+}
+
+.input-box {
+    position: relative;
+    font-size: 1.5em;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    padding: 3px;
+    display: inline-block;
+    border-radius: 9999em;
+}
+
+    .input-box *:not(span) {
+        position: relative;
+        display: inherit;
+        border-radius: inherit;
+        margin: 0;
+        border: none;
+        outline: none;
+        padding: 0 0.325em;
+        z-index: 1;
+    }
+
+        .input-box *:not(span):focus + span {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+    .input-box span {
+        -webkit-transform: scale(0.993, 0.94);
+        transform: scale(0.993, 0.94);
+        transition: opacity 0.25s, -webkit-transform 0.5s;
+        transition: transform 0.5s, opacity 0.25s;
+        transition: transform 0.5s, opacity 0.25s, -webkit-transform 0.5s;
+        opacity: 0;
+        position: absolute;
+        z-index: 0;
+        margin: 4px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #1beabd, -3px 3px 30px #10abff;
+    }
+
+::-webkit-input-placeholder {
+    color: #cbd0d5;
+}
+
+:-ms-input-placeholder {
+    color: #cbd0d5;
+}
+
+::-ms-input-placeholder {
+    color: #cbd0d5;
+}
+
+::placeholder {
+    color: #cbd0d5;
+}
+
+.b2 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    position: absolute;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    
+    width: 200px;
+    
+    margin-left:20px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+    border: 5px solid transparent;
+    border-bottom-color: rgba(0,0,0,0.35);
+    background: hsla(260, 100%, 50%, 1);
+    cursor: pointer;
+    outline: 0 !important;
+    animation: pulse 1s infinite alternate;
+    transition: background 0.4s, border 0.2s, margin 0.2s;
+}
+
+    .b2:hover {
+        background: hsla(220, 100%, 60%, 1);
+        margin-top: -1px;
+        animation: none;
+    }
+
+    .b2:active {
+        border-bottom-width: 0;
+        margin-top: 5px;
+    }
+@keyframes pulse {
+    0% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: 6px;
+    }
+}
+
+#myCanvas {
+    display: block;
 }

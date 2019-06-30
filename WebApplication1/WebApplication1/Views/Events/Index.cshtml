@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<WebApplication1.Models.Event>
 
 @{
-    ViewBag.Title = "Event Page";
+    ViewBag.Title = "Index";
 }
 
-<h2 class="stylehead">@ViewBag.Title</h2>
+<h2 class="stylehead">Event List</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -16,6 +16,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EventName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventNote)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.latitude)
@@ -35,15 +38,18 @@
             @Html.DisplayFor(modelItem => item.EventName)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.EventNote)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.latitude)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.longtitude)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.EventID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EventID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EventID })
         </td>
     </tr>
 }

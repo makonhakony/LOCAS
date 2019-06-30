@@ -9,7 +9,7 @@
         success: function (result) {
             if (checkmarker) {
                 onsuccess4(result);
-                window.alert("done");
+                window.alert("Check the result below the map!");
             }
 
             //init map
